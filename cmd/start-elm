@@ -1,0 +1,5 @@
+#!/bin/bash
+# set -eu
+
+cd selected/elm
+../../node_modules/.bin/elm-live src/Main.elm --path-to-elm=../../node_modules/.bin/elm --no-server -- --output=build/elm.js

@@ -1,0 +1,7 @@
+#!/bin/bash
+# set -eu
+
+node_modules/.bin/prettier ./selected/react/src/*.* --write
+node_modules/.bin/prettier ./selected/vanillajs/src/*.* --write
+node_modules/.bin/prettier ./selected/vue/src/*.* --write
+node_modules/.bin/prettier ./selected/svelte/src/*.* --write

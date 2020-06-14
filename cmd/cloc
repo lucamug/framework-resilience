@@ -1,0 +1,12 @@
+#!/bin/bash
+# set -eu
+printf "\n### VanillaJS ###\n\n"
+node_modules/.bin/cloc selected/vanillajs/index.html selected/vanillajs/src
+printf "\n### React ###\n\n"
+node_modules/.bin/cloc selected/react/index.html selected/react/src
+printf "\n### Vue ###\n\n"
+node_modules/.bin/cloc selected/vue/index.html selected/vue/src
+printf "\n### Svelte ###\n\n"
+node_modules/.bin/cloc selected/svelte/index.html selected/svelte/src
+printf "\n### Elm ###\n\n"
+node_modules/.bin/cloc selected/elm/index.html selected/elm/src

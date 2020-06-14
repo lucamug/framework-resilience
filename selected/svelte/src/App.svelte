@@ -74,7 +74,7 @@
 			? items.filter(item => item.completed)
 			: items.filter(item => !item.completed);
 
-	$: numActive = items.filter(item => !item.completed).length;
+	$: numActive = items.filter(item => !item.completed);
 
 	$: numCompleted = items.filter(item => item.completed).length;
 

@@ -365,7 +365,7 @@ viewControls : String -> List Entry -> Html Msg
 viewControls visibility entries =
     let
         entriesCompleted =
-            List.length (List.filter .completed entries)
+            List.filter .completed entries
 
         entriesLeft =
             List.length entries - entriesCompleted

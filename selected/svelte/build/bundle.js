@@ -525,36 +525,36 @@ var app = (function () {
     			attr_dev(input, "class", "toggle-all");
     			attr_dev(input, "type", "checkbox");
     			input.checked = input_checked_value = /*numCompleted*/ ctx[5] === /*items*/ ctx[1].length;
-    			add_location(input, file, 99, 2, 2127);
+    			add_location(input, file, 99, 2, 2120);
     			attr_dev(label, "for", "toggle-all");
-    			add_location(label, file, 100, 2, 2252);
+    			add_location(label, file, 100, 2, 2245);
     			attr_dev(ul0, "class", "todo-list");
-    			add_location(ul0, file, 102, 2, 2308);
-    			add_location(strong, file, 127, 4, 3022);
+    			add_location(ul0, file, 102, 2, 2301);
+    			add_location(strong, file, 127, 4, 3015);
     			attr_dev(span, "class", "todo-count");
-    			add_location(span, file, 126, 3, 2992);
+    			add_location(span, file, 126, 3, 2985);
     			attr_dev(a0, "class", a0_class_value = /*currentFilter*/ ctx[0] === "all" ? "selected" : "");
     			attr_dev(a0, "href", "#/");
-    			add_location(a0, file, 131, 8, 3137);
-    			add_location(li0, file, 131, 4, 3133);
+    			add_location(a0, file, 131, 8, 3130);
+    			add_location(li0, file, 131, 4, 3126);
     			attr_dev(a1, "class", a1_class_value = /*currentFilter*/ ctx[0] === "active" ? "selected" : "");
     			attr_dev(a1, "href", "#/active");
-    			add_location(a1, file, 132, 8, 3223);
-    			add_location(li1, file, 132, 4, 3219);
+    			add_location(a1, file, 132, 8, 3216);
+    			add_location(li1, file, 132, 4, 3212);
 
     			attr_dev(a2, "class", a2_class_value = /*currentFilter*/ ctx[0] === "completed"
     			? "selected"
     			: "");
 
     			attr_dev(a2, "href", "#/completed");
-    			add_location(a2, file, 133, 8, 3321);
-    			add_location(li2, file, 133, 4, 3317);
+    			add_location(a2, file, 133, 8, 3314);
+    			add_location(li2, file, 133, 4, 3310);
     			attr_dev(ul1, "class", "filters");
-    			add_location(ul1, file, 130, 3, 3108);
+    			add_location(ul1, file, 130, 3, 3101);
     			attr_dev(footer, "class", "footer");
-    			add_location(footer, file, 125, 2, 2965);
+    			add_location(footer, file, 125, 2, 2958);
     			attr_dev(section, "class", "main");
-    			add_location(section, file, 98, 1, 2102);
+    			add_location(section, file, 98, 1, 2095);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, section, anchor);
@@ -677,7 +677,7 @@ var app = (function () {
     			attr_dev(input, "id", "edit");
     			attr_dev(input, "class", "edit");
     			input.autofocus = true;
-    			add_location(input, file, 112, 6, 2764);
+    			add_location(input, file, 112, 6, 2757);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, input, anchor);
@@ -763,18 +763,18 @@ var app = (function () {
     			t4 = space();
     			attr_dev(input, "class", "toggle");
     			attr_dev(input, "type", "checkbox");
-    			add_location(input, file, 106, 6, 2496);
-    			add_location(label, file, 107, 6, 2571);
+    			add_location(input, file, 106, 6, 2489);
+    			add_location(label, file, 107, 6, 2564);
     			attr_dev(button, "class", "destroy");
-    			add_location(button, file, 108, 6, 2649);
+    			add_location(button, file, 108, 6, 2642);
     			attr_dev(div, "class", "view");
-    			add_location(div, file, 105, 5, 2471);
+    			add_location(div, file, 105, 5, 2464);
 
     			attr_dev(li, "class", li_class_value = "" + ((/*item*/ ctx[16].completed ? "completed" : "") + " " + (/*editing*/ ctx[2] === /*index*/ ctx[18]
     			? "editing"
     			: "")));
 
-    			add_location(li, file, 104, 4, 2380);
+    			add_location(li, file, 104, 4, 2373);
     			this.first = li;
     		},
     		m: function mount(target, anchor) {
@@ -859,7 +859,7 @@ var app = (function () {
     			button = element("button");
     			button.textContent = "Clear completed";
     			attr_dev(button, "class", "clear-completed");
-    			add_location(button, file, 137, 4, 3456);
+    			add_location(button, file, 137, 4, 3449);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -909,13 +909,13 @@ var app = (function () {
     			t2 = space();
     			if (if_block) if_block.c();
     			if_block_anchor = empty();
-    			add_location(h1, file, 88, 1, 1946);
+    			add_location(h1, file, 88, 1, 1939);
     			attr_dev(input, "class", "new-todo");
     			attr_dev(input, "placeholder", "What needs to be done?");
     			input.autofocus = true;
-    			add_location(input, file, 89, 1, 1962);
+    			add_location(input, file, 89, 1, 1955);
     			attr_dev(header, "class", "header");
-    			add_location(header, file, 87, 0, 1921);
+    			add_location(header, file, 87, 0, 1914);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1106,7 +1106,7 @@ var app = (function () {
     		}
 
     		if ($$self.$$.dirty & /*items*/ 2) {
-    			 $$invalidate(4, numActive = items.filter(item => !item.completed).length);
+    			 $$invalidate(4, numActive = items.filter(item => !item.completed));
     		}
 
     		if ($$self.$$.dirty & /*items*/ 2) {

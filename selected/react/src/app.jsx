@@ -119,9 +119,17 @@ var app = app || {};
                 );
             }, this);
 
-            var activeTodoCount = todos.reduce(function (accum, todo) {
-                return todo.completed ? accum : accum + 1;
-            }, 0);
+            // var activeTodoCount = todos.reduce(function (accum, todo) {
+            //     return todo.completed ? accum : accum + 1;
+            // }, 0);
+            //
+            // We change the mode of counting, using this equivalent line:
+            //
+            // var activeTodoCount = todos.filter(function(todo){return !todo.completed;}).length;
+            //
+            // Then we remove ".length" to introduce the bug
+            //
+            var activeTodoCount = todos.filter(function(todo){return !todo.completed;}) ;
 
             var completedCount = todos.length - activeTodoCount;
 

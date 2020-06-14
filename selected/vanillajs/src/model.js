@@ -109,6 +109,15 @@
                 }
                 todos.total++;
             });
+            //
+            // We re-calculate the active todos using `filter` instead of
+            // the `forEach` loop using this line:
+            //
+            // todos.active = data.filter(function(todo){return !todo.completed;}).length;
+            //
+            // Then we remove ".length" to introduce the bug
+            //
+            todos.active = data.filter(function(todo){return !todo.completed;});
             callback(todos);
         });
     };

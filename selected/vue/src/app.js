@@ -46,7 +46,7 @@
                 return filters[this.visibility](this.todos);
             },
             remaining: function () {
-                return filters.active(this.todos).length;
+                return filters.active(this.todos);
             },
             allDone: {
                 get: function () {

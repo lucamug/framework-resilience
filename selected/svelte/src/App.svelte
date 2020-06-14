@@ -124,7 +124,7 @@
 		</ul>
 
 		<footer class="footer">
-			<span class="todo-count">
+			<spam class="todo-count">
 				<strong>{numActive}</strong> {numActive === 1 ? 'item' : 'items'} left
 			</span>
 

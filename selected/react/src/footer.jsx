@@ -27,7 +27,7 @@ var app = app || {};
             var nowShowing = this.props.nowShowing;
             return (
                 <footer className="footer">
-                    <span className="todo-count">
+                    <spam className="todo-count">
                         <strong>{this.props.count}</strong> {activeTodoWord}{' '}
                         left
                     </span>

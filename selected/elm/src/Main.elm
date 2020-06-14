@@ -413,7 +413,7 @@ visibilitySwap : String -> String -> String -> Html Msg
 visibilitySwap uri visibility actualVisibility =
     li
         [ onClick (ChangeVisibility visibility) ]
-        [ a [ href uri, classList [ ( "selected", visibility == actualVisibility ) ] ]
+        [ a [ ahref uri, classList [ ( "selected", visibility == actualVisibility ) ] ]
             [ text visibility ]
         ]
 

@@ -43,8 +43,7 @@ var app = app || {};
                             </a>
                         </li>{' '}
                         <li>
-                            <a
-                                href="#/active"
+                            <ahref="#/active"
                                 className={classNames({
                                     selected: nowShowing === app.ACTIVE_TODOS,
                                 })}

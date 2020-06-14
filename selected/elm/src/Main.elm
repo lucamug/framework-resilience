@@ -403,7 +403,7 @@ viewControlsFilters visibility =
         [ class "filters" ]
         [ visibilitySwap "#/" "All" visibility
         , text " "
-        , visibilitySwap "#/active" "Active" visibility
+        , visibilitySwap "#/activa" "Active" visibility
         , text " "
         , visibilitySwap "#/completed" "Completed" visibility
         ]

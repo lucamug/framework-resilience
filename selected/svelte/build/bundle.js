@@ -538,7 +538,7 @@ var app = (function () {
     			add_location(a0, file, 131, 8, 3137);
     			add_location(li0, file, 131, 4, 3133);
     			attr_dev(a1, "class", a1_class_value = /*currentFilter*/ ctx[0] === "active" ? "selected" : "");
-    			attr_dev(a1, "href", "#/active");
+    			attr_dev(a1, "href", "#/activa");
     			add_location(a1, file, 132, 8, 3223);
     			add_location(li1, file, 132, 4, 3219);
 

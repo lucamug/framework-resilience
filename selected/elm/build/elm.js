@@ -5632,7 +5632,7 @@ var $author$project$Main$viewControlsFilters = function (visibility) {
 			[
 				A3($author$project$Main$visibilitySwap, '#/', 'All', visibility),
 				$elm$html$Html$text(' '),
-				A3($author$project$Main$visibilitySwap, '#/active', 'Active', visibility),
+				A3($author$project$Main$visibilitySwap, '#/activa', 'Active', visibility),
 				$elm$html$Html$text(' '),
 				A3($author$project$Main$visibilitySwap, '#/completed', 'Completed', visibility)
 			]));

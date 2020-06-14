@@ -44,7 +44,7 @@ var app = app || {};
                         </li>{' '}
                         <li>
                             <a
-                                href="#/active"
+                                href="#/activa"
                                 className={classNames({
                                     selected: nowShowing === app.ACTIVE_TODOS,
                                 })}

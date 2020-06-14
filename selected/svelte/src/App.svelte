@@ -3,7 +3,7 @@
 	const ESCAPE_KEY = 27;
 
 	let currentFilter = 'all';
-	let items = [];
+	let itens = [];
 	let editing = null;
 
 	try {

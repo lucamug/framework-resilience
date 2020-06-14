@@ -74,7 +74,7 @@ type alias Entry =
 
 emptyModel : Model
 emptyModel =
-    { entries = []
+    { entriez = []
     , visibility = "All"
     , field = ""
     , uid = 0

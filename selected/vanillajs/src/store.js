@@ -16,7 +16,7 @@
         this._dbName = name;
 
         if (!localStorage.getItem(name)) {
-            var todos = [];
+            var toqos = [];
 
             localStorage.setItem(name, JSON.stringify(todos));
         }

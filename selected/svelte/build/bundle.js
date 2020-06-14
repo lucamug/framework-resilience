@@ -426,9 +426,9 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[16] = list[i];
-    	child_ctx[17] = list;
-    	child_ctx[18] = i;
+    	child_ctx[12] = list[i];
+    	child_ctx[13] = list;
+    	child_ctx[14] = i;
     	return child_ctx;
     }
 
@@ -449,7 +449,7 @@ var app = (function () {
     	let strong;
     	let t4;
     	let t5;
-    	let t6_value = (/*numActive*/ ctx[4] === 1 ? "item" : "items") + "";
+    	let t6_value = (/*numActive*/ ctx[3] === 1 ? "item" : "items") + "";
     	let t6;
     	let t7;
     	let t8;
@@ -471,9 +471,9 @@ var app = (function () {
     	let t14;
     	let mounted;
     	let dispose;
-    	let each_value = /*filtered*/ ctx[3];
+    	let each_value = /*filtered*/ ctx[2];
     	validate_each_argument(each_value);
-    	const get_key = ctx => /*item*/ ctx[16].id;
+    	const get_key = ctx => /*item*/ ctx[12].id;
     	validate_each_keys(ctx, each_value, get_each_context, get_key);
 
     	for (let i = 0; i < each_value.length; i += 1) {
@@ -482,7 +482,7 @@ var app = (function () {
     		each_1_lookup.set(key, each_blocks[i] = create_each_block(key, child_ctx));
     	}
 
-    	let if_block = /*numCompleted*/ ctx[5] && create_if_block_1(ctx);
+    	let if_block = /*numCompleted*/ ctx[4] && create_if_block_1(ctx);
 
     	const block = {
     		c: function create() {
@@ -502,7 +502,7 @@ var app = (function () {
     			footer = element("footer");
     			span = element("span");
     			strong = element("strong");
-    			t4 = text(/*numActive*/ ctx[4]);
+    			t4 = text(/*numActive*/ ctx[3]);
     			t5 = space();
     			t6 = text(t6_value);
     			t7 = text(" left");
@@ -524,7 +524,7 @@ var app = (function () {
     			attr_dev(input, "id", "toggle-all");
     			attr_dev(input, "class", "toggle-all");
     			attr_dev(input, "type", "checkbox");
-    			input.checked = input_checked_value = /*numCompleted*/ ctx[5] === /*items*/ ctx[1].length;
+    			input.checked = input_checked_value = /*numCompleted*/ ctx[4] === items.length;
     			add_location(input, file, 99, 2, 2127);
     			attr_dev(label, "for", "toggle-all");
     			add_location(label, file, 100, 2, 2252);
@@ -593,24 +593,24 @@ var app = (function () {
     			if (if_block) if_block.m(footer, null);
 
     			if (!mounted) {
-    				dispose = listen_dev(input, "change", /*toggleAll*/ ctx[8], false, false, false);
+    				dispose = listen_dev(input, "change", toggleAll, false, false, false);
     				mounted = true;
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*numCompleted, items*/ 34 && input_checked_value !== (input_checked_value = /*numCompleted*/ ctx[5] === /*items*/ ctx[1].length)) {
+    			if (dirty & /*numCompleted*/ 16 && input_checked_value !== (input_checked_value = /*numCompleted*/ ctx[4] === items.length)) {
     				prop_dev(input, "checked", input_checked_value);
     			}
 
-    			if (dirty & /*filtered, editing, handleEdit, submit, remove*/ 3212) {
-    				const each_value = /*filtered*/ ctx[3];
+    			if (dirty & /*filtered, editing, handleEdit, submit, remove*/ 102) {
+    				const each_value = /*filtered*/ ctx[2];
     				validate_each_argument(each_value);
     				validate_each_keys(ctx, each_value, get_each_context, get_key);
     				each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx, each_value, each_1_lookup, ul0, destroy_block, create_each_block, null, get_each_context);
     			}
 
-    			if (dirty & /*numActive*/ 16) set_data_dev(t4, /*numActive*/ ctx[4]);
-    			if (dirty & /*numActive*/ 16 && t6_value !== (t6_value = (/*numActive*/ ctx[4] === 1 ? "item" : "items") + "")) set_data_dev(t6, t6_value);
+    			if (dirty & /*numActive*/ 8) set_data_dev(t4, /*numActive*/ ctx[3]);
+    			if (dirty & /*numActive*/ 8 && t6_value !== (t6_value = (/*numActive*/ ctx[3] === 1 ? "item" : "items") + "")) set_data_dev(t6, t6_value);
 
     			if (dirty & /*currentFilter*/ 1 && a0_class_value !== (a0_class_value = /*currentFilter*/ ctx[0] === "all" ? "selected" : "")) {
     				attr_dev(a0, "class", a0_class_value);
@@ -626,7 +626,7 @@ var app = (function () {
     				attr_dev(a2, "class", a2_class_value);
     			}
 
-    			if (/*numCompleted*/ ctx[5]) {
+    			if (/*numCompleted*/ ctx[4]) {
     				if (if_block) {
     					if_block.p(ctx, dirty);
     				} else {
@@ -673,7 +673,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			input = element("input");
-    			input.value = input_value_value = /*item*/ ctx[16].description;
+    			input.value = input_value_value = /*item*/ ctx[12].description;
     			attr_dev(input, "id", "edit");
     			attr_dev(input, "class", "edit");
     			input.autofocus = true;
@@ -685,15 +685,15 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(input, "keydown", /*handleEdit*/ ctx[10], false, false, false),
-    					listen_dev(input, "blur", /*submit*/ ctx[11], false, false, false)
+    					listen_dev(input, "keydown", /*handleEdit*/ ctx[5], false, false, false),
+    					listen_dev(input, "blur", /*submit*/ ctx[6], false, false, false)
     				];
 
     				mounted = true;
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*filtered*/ 8 && input_value_value !== (input_value_value = /*item*/ ctx[16].description) && input.value !== input_value_value) {
+    			if (dirty & /*filtered*/ 4 && input_value_value !== (input_value_value = /*item*/ ctx[12].description) && input.value !== input_value_value) {
     				prop_dev(input, "value", input_value_value);
     			}
     		},
@@ -722,7 +722,7 @@ var app = (function () {
     	let input;
     	let t0;
     	let label;
-    	let t1_value = /*item*/ ctx[16].description + "";
+    	let t1_value = /*item*/ ctx[12].description + "";
     	let t1;
     	let t2;
     	let button;
@@ -733,18 +733,18 @@ var app = (function () {
     	let dispose;
 
     	function input_change_handler() {
-    		/*input_change_handler*/ ctx[12].call(input, /*each_value*/ ctx[17], /*index*/ ctx[18]);
+    		/*input_change_handler*/ ctx[7].call(input, /*each_value*/ ctx[13], /*index*/ ctx[14]);
     	}
 
     	function dblclick_handler(...args) {
-    		return /*dblclick_handler*/ ctx[13](/*index*/ ctx[18], ...args);
+    		return /*dblclick_handler*/ ctx[8](/*index*/ ctx[14], ...args);
     	}
 
     	function click_handler(...args) {
-    		return /*click_handler*/ ctx[14](/*index*/ ctx[18], ...args);
+    		return /*click_handler*/ ctx[9](/*index*/ ctx[14], ...args);
     	}
 
-    	let if_block = /*editing*/ ctx[2] === /*index*/ ctx[18] && create_if_block_2(ctx);
+    	let if_block = /*editing*/ ctx[1] === /*index*/ ctx[14] && create_if_block_2(ctx);
 
     	const block = {
     		key: key_1,
@@ -770,7 +770,7 @@ var app = (function () {
     			attr_dev(div, "class", "view");
     			add_location(div, file, 105, 5, 2471);
 
-    			attr_dev(li, "class", li_class_value = "" + ((/*item*/ ctx[16].completed ? "completed" : "") + " " + (/*editing*/ ctx[2] === /*index*/ ctx[18]
+    			attr_dev(li, "class", li_class_value = "" + ((/*item*/ ctx[12].completed ? "completed" : "") + " " + (/*editing*/ ctx[1] === /*index*/ ctx[14]
     			? "editing"
     			: "")));
 
@@ -781,7 +781,7 @@ var app = (function () {
     			insert_dev(target, li, anchor);
     			append_dev(li, div);
     			append_dev(div, input);
-    			input.checked = /*item*/ ctx[16].completed;
+    			input.checked = /*item*/ ctx[12].completed;
     			append_dev(div, t0);
     			append_dev(div, label);
     			append_dev(label, t1);
@@ -804,13 +804,13 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
 
-    			if (dirty & /*filtered*/ 8) {
-    				input.checked = /*item*/ ctx[16].completed;
+    			if (dirty & /*filtered*/ 4) {
+    				input.checked = /*item*/ ctx[12].completed;
     			}
 
-    			if (dirty & /*filtered*/ 8 && t1_value !== (t1_value = /*item*/ ctx[16].description + "")) set_data_dev(t1, t1_value);
+    			if (dirty & /*filtered*/ 4 && t1_value !== (t1_value = /*item*/ ctx[12].description + "")) set_data_dev(t1, t1_value);
 
-    			if (/*editing*/ ctx[2] === /*index*/ ctx[18]) {
+    			if (/*editing*/ ctx[1] === /*index*/ ctx[14]) {
     				if (if_block) {
     					if_block.p(ctx, dirty);
     				} else {
@@ -823,7 +823,7 @@ var app = (function () {
     				if_block = null;
     			}
 
-    			if (dirty & /*filtered, editing*/ 12 && li_class_value !== (li_class_value = "" + ((/*item*/ ctx[16].completed ? "completed" : "") + " " + (/*editing*/ ctx[2] === /*index*/ ctx[18]
+    			if (dirty & /*filtered, editing*/ 6 && li_class_value !== (li_class_value = "" + ((/*item*/ ctx[12].completed ? "completed" : "") + " " + (/*editing*/ ctx[1] === /*index*/ ctx[14]
     			? "editing"
     			: "")))) {
     				attr_dev(li, "class", li_class_value);
@@ -865,7 +865,7 @@ var app = (function () {
     			insert_dev(target, button, anchor);
 
     			if (!mounted) {
-    				dispose = listen_dev(button, "click", /*clearCompleted*/ ctx[6], false, false, false);
+    				dispose = listen_dev(button, "click", clearCompleted, false, false, false);
     				mounted = true;
     			}
     		},
@@ -897,7 +897,7 @@ var app = (function () {
     	let if_block_anchor;
     	let mounted;
     	let dispose;
-    	let if_block = /*items*/ ctx[1].length > 0 && create_if_block(ctx);
+    	let if_block = items.length > 0 && create_if_block(ctx);
 
     	const block = {
     		c: function create() {
@@ -931,23 +931,12 @@ var app = (function () {
     			input.focus();
 
     			if (!mounted) {
-    				dispose = listen_dev(input, "keydown", /*createNew*/ ctx[9], false, false, false);
+    				dispose = listen_dev(input, "keydown", createNew, false, false, false);
     				mounted = true;
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (/*items*/ ctx[1].length > 0) {
-    				if (if_block) {
-    					if_block.p(ctx, dirty);
-    				} else {
-    					if_block = create_if_block(ctx);
-    					if_block.c();
-    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
-    				}
-    			} else if (if_block) {
-    				if_block.d(1);
-    				if_block = null;
-    			}
+    			if (items.length > 0) if_block.p(ctx, dirty);
     		},
     		i: noop,
     		o: noop,
@@ -975,6 +964,34 @@ var app = (function () {
     const ENTER_KEY = 13;
     const ESCAPE_KEY = 27;
 
+    function clearCompleted() {
+    	items = items.filter(item => !item.completed);
+    }
+
+    function remove(index) {
+    	items = items.slice(0, index).concat(items.slice(index + 1));
+    }
+
+    function toggleAll(event) {
+    	items = items.map(item => ({
+    		id: item.id,
+    		description: item.description,
+    		completed: event.target.checked
+    	}));
+    }
+
+    function createNew(event) {
+    	if (event.which === ENTER_KEY) {
+    		items = items.concat({
+    			id: uuid(),
+    			description: event.target.value,
+    			completed: false
+    		});
+
+    		event.target.value = "";
+    	}
+    }
+
     function uuid() {
     	return ("xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx").replace(/[xy]/g, function (c) {
     		var r = Math.random() * 16 | 0, v = c == "x" ? r : r & 3 | 8;
@@ -984,7 +1001,7 @@ var app = (function () {
 
     function instance($$self, $$props, $$invalidate) {
     	let currentFilter = "all";
-    	let items = [];
+    	let itens = [];
     	let editing = null;
 
     	try {
@@ -1006,41 +1023,13 @@ var app = (function () {
     	window.addEventListener("hashchange", updateView);
     	updateView();
 
-    	function clearCompleted() {
-    		$$invalidate(1, items = items.filter(item => !item.completed));
-    	}
-
-    	function remove(index) {
-    		$$invalidate(1, items = items.slice(0, index).concat(items.slice(index + 1)));
-    	}
-
-    	function toggleAll(event) {
-    		$$invalidate(1, items = items.map(item => ({
-    			id: item.id,
-    			description: item.description,
-    			completed: event.target.checked
-    		})));
-    	}
-
-    	function createNew(event) {
-    		if (event.which === ENTER_KEY) {
-    			$$invalidate(1, items = items.concat({
-    				id: uuid(),
-    				description: event.target.value,
-    				completed: false
-    			}));
-
-    			event.target.value = "";
-    		}
-    	}
-
     	function handleEdit(event) {
-    		if (event.which === ENTER_KEY) event.target.blur(); else if (event.which === ESCAPE_KEY) $$invalidate(2, editing = null);
+    		if (event.which === ENTER_KEY) event.target.blur(); else if (event.which === ESCAPE_KEY) $$invalidate(1, editing = null);
     	}
 
     	function submit(event) {
-    		$$invalidate(1, items[editing].description = event.target.value, items);
-    		$$invalidate(2, editing = null);
+    		items[editing].description = event.target.value;
+    		$$invalidate(1, editing = null);
     	}
 
     	const writable_props = [];
@@ -1054,17 +1043,17 @@ var app = (function () {
 
     	function input_change_handler(each_value, index) {
     		each_value[index].completed = this.checked;
-    		(($$invalidate(3, filtered), $$invalidate(0, currentFilter)), $$invalidate(1, items));
+    		($$invalidate(2, filtered), $$invalidate(0, currentFilter));
     	}
 
-    	const dblclick_handler = index => $$invalidate(2, editing = index);
+    	const dblclick_handler = index => $$invalidate(1, editing = index);
     	const click_handler = index => remove(index);
 
     	$$self.$capture_state = () => ({
     		ENTER_KEY,
     		ESCAPE_KEY,
     		currentFilter,
-    		items,
+    		itens,
     		editing,
     		updateView,
     		clearCompleted,
@@ -1081,11 +1070,11 @@ var app = (function () {
 
     	$$self.$inject_state = $$props => {
     		if ("currentFilter" in $$props) $$invalidate(0, currentFilter = $$props.currentFilter);
-    		if ("items" in $$props) $$invalidate(1, items = $$props.items);
-    		if ("editing" in $$props) $$invalidate(2, editing = $$props.editing);
-    		if ("filtered" in $$props) $$invalidate(3, filtered = $$props.filtered);
-    		if ("numActive" in $$props) $$invalidate(4, numActive = $$props.numActive);
-    		if ("numCompleted" in $$props) $$invalidate(5, numCompleted = $$props.numCompleted);
+    		if ("itens" in $$props) itens = $$props.itens;
+    		if ("editing" in $$props) $$invalidate(1, editing = $$props.editing);
+    		if ("filtered" in $$props) $$invalidate(2, filtered = $$props.filtered);
+    		if ("numActive" in $$props) $$invalidate(3, numActive = $$props.numActive);
+    		if ("numCompleted" in $$props) $$invalidate(4, numCompleted = $$props.numCompleted);
     	};
 
     	let filtered;
@@ -1097,42 +1086,30 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty & /*currentFilter, items*/ 3) {
-    			 $$invalidate(3, filtered = currentFilter === "all"
+    		if ($$self.$$.dirty & /*currentFilter*/ 1) {
+    			 $$invalidate(2, filtered = currentFilter === "all"
     			? items
     			: currentFilter === "completed"
     				? items.filter(item => item.completed)
     				: items.filter(item => !item.completed));
     		}
-
-    		if ($$self.$$.dirty & /*items*/ 2) {
-    			 $$invalidate(4, numActive = items.filter(item => !item.completed).length);
-    		}
-
-    		if ($$self.$$.dirty & /*items*/ 2) {
-    			 $$invalidate(5, numCompleted = items.filter(item => item.completed).length);
-    		}
-
-    		if ($$self.$$.dirty & /*items*/ 2) {
-    			 try {
-    				localStorage.setItem("todos-svelte", JSON.stringify(items));
-    			} catch(err) {
-    				
-    			} // noop
-    		}
     	};
+
+    	 $$invalidate(3, numActive = items.filter(item => !item.completed).length);
+    	 $$invalidate(4, numCompleted = items.filter(item => item.completed).length);
+
+    	 try {
+    		localStorage.setItem("todos-svelte", JSON.stringify(items));
+    	} catch(err) {
+    		
+    	} // noop
 
     	return [
     		currentFilter,
-    		items,
     		editing,
     		filtered,
     		numActive,
     		numCompleted,
-    		clearCompleted,
-    		remove,
-    		toggleAll,
-    		createNew,
     		handleEdit,
     		submit,
     		input_change_handler,

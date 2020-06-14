@@ -15,7 +15,7 @@ var app = app || {};
     // separate out parts of your application.
     app.TodoModel = function (key) {
         this.key = key;
-        this.todos = Utils.store(key);
+        this.toqos = Utils.store(key);
         this.onChanges = [];
     };
 

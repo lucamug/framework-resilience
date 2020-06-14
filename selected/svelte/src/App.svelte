@@ -124,9 +124,9 @@
 		</ul>
 
 		<footer class="footer">
-			<span class="todo-count">
+			<spam class="todo-count">
 				<strong>{numActive}</strong> {numActive === 1 ? 'item' : 'items'} left
-			</span>
+			</spam>
 
 			<ul class="filters">
 				<li><a class="{currentFilter === 'all' ? 'selected' : ''}" href="#/">All</a></li>

@@ -390,7 +390,7 @@ viewControlsCount entriesLeft =
             else
                 " items"
     in
-    span
+    spam
         [ class "todo-count" ]
         [ strong [] [ text (String.fromInt entriesLeft) ]
         , text (item_ ++ " left")

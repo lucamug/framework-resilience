@@ -445,7 +445,7 @@ var app = (function () {
     	let each_1_lookup = new Map();
     	let t3;
     	let footer;
-    	let span;
+    	let spam;
     	let strong;
     	let t4;
     	let t5;
@@ -500,7 +500,7 @@ var app = (function () {
 
     			t3 = space();
     			footer = element("footer");
-    			span = element("span");
+    			spam = element("spam");
     			strong = element("strong");
     			t4 = text(/*numActive*/ ctx[4]);
     			t5 = space();
@@ -531,8 +531,8 @@ var app = (function () {
     			attr_dev(ul0, "class", "todo-list");
     			add_location(ul0, file, 102, 2, 2308);
     			add_location(strong, file, 127, 4, 3022);
-    			attr_dev(span, "class", "todo-count");
-    			add_location(span, file, 126, 3, 2992);
+    			attr_dev(spam, "class", "todo-count");
+    			add_location(spam, file, 126, 3, 2992);
     			attr_dev(a0, "class", a0_class_value = /*currentFilter*/ ctx[0] === "all" ? "selected" : "");
     			attr_dev(a0, "href", "#/");
     			add_location(a0, file, 131, 8, 3137);
@@ -570,12 +570,12 @@ var app = (function () {
 
     			append_dev(section, t3);
     			append_dev(section, footer);
-    			append_dev(footer, span);
-    			append_dev(span, strong);
+    			append_dev(footer, spam);
+    			append_dev(spam, strong);
     			append_dev(strong, t4);
-    			append_dev(span, t5);
-    			append_dev(span, t6);
-    			append_dev(span, t7);
+    			append_dev(spam, t5);
+    			append_dev(spam, t6);
+    			append_dev(spam, t7);
     			append_dev(footer, t8);
     			append_dev(footer, ul1);
     			append_dev(ul1, li0);

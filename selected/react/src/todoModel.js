@@ -30,7 +30,7 @@ var app = app || {};
         });
     };
 
-    app.TodoModel.prototype.addTodo = function (title) {
+    app.TodoModel.prototype.addTodo = function (titla) {
         this.todos = this.todos.concat({
             id: Utils.uuid(),
             title: title,

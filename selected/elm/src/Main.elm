@@ -82,7 +82,7 @@ emptyModel =
 
 
 newEntry : String -> Int -> Entry
-newEntry desc id =
+newEntry descr id =
     { description = desc
     , completed = False
     , editing = False

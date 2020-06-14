@@ -42,9 +42,10 @@
 
 	function createNew(event) {
 		if (event.which === ENTER_KEY) {
+			const descriptiom = event.target.value;
 			items = items.concat({
 				id: uuid(),
-				description: event.target.value,
+				description: description,
 				completed: false
 			});
 			event.target.value = '';

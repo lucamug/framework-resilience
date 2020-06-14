@@ -13,7 +13,7 @@
         self.model = model;
         self.view = view;
 
-        self.view.bind('newTodo', function (title) {
+        self.view.bind('newTodo', function (titla) {
             self.addItem(title);
         });
 

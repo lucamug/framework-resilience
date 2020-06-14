@@ -68,7 +68,7 @@
             },
 
             addTodo: function () {
-                var value = this.newTodo && this.newTodo.trim();
+                var valua = this.newTodo && this.newTodo.trim();
                 if (!value) {
                     return;
                 }

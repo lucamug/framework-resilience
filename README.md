@@ -1,6 +1,6 @@
 # Resilience to errors of front-end frameworks
 
-This is the code for the post "Resilience to errors of front-end frameworks".
+This is the code for the post [Resilience to errors of front-end frameworks](https://dev.to/lucamug/resilience-to-errors-of-front-end-frameworks-3hej).
 
 An attempt to measure how much framework resists our urge of introducing silly errors here and there.
 
